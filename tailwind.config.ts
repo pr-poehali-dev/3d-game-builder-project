@@ -52,6 +52,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				neon: {
+					cyan: '#00FFFF',
+					yellow: '#FFFF00',
+					pink: '#FF00FF',
+					green: '#00FF80',
+					purple: '#9b87f5',
+				},
+				game: {
+					dark: '#1A1A2E',
+					darker: '#16213E',
+					accent: '#0F3460',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +96,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'neon-glow': {
+					'0%, 100%': { 
+						textShadow: '0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF',
+						boxShadow: '0 0 5px #00FFFF'
+					},
+					'50%': { 
+						textShadow: '0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF',
+						boxShadow: '0 0 15px #00FFFF'
+					},
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'neon-glow': 'neon-glow 2s ease-in-out infinite',
+				'fade-in': 'fade-in 0.3s ease-out'
+			},
+			backgroundImage: {
+				'game-gradient': 'linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%)',
+				'neon-gradient': 'linear-gradient(135deg, #00FFFF 0%, #9b87f5 50%, #FF00FF 100%)'
 			}
 		}
 	},
